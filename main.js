@@ -1,33 +1,34 @@
-let playerMove = "rock";
-let computerMove = "scissors";
+let playerMove;
+let computerMove;
 
-
+function getWinner(playerMove, computerMove) {
 if (playerMove === "rock") { 
     if (computerMove === "rock") {
-    console.log("draw");
+    return 0;
 } else if (computerMove === "paper") {
-    console.log("loss");
+    return -1;
 } else if (computerMove === "scissors") {
-    console.log("win");
+    return 1;
 }
 };
-
 if (playerMove === "scissors") { 
     if (computerMove === "scissors") {
-    console.log("draw");
+        return 0;
 } else if (computerMove === "rock") {
-    console.log("loss");
+    return -1;
 } else if (computerMove === "paper") {
-    console.log("win");
+    return 1;
 }
 };
-
 if (playerMove === "paper") { 
     if (computerMove === "paper") {
-    console.log("draw");
+        return 0;
 } else if (computerMove === "scissors") {
-    console.log("loss");
+    return -1;
 } else if (computerMove === "rock") {
-    console.log("win");
+    return 1;
 }
 };
+}
+
+let result = getWinner("rock", "scissors")
