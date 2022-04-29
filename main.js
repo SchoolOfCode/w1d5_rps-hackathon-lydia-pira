@@ -1,4 +1,11 @@
+let gameNumber = 0;
+let wins = 0;
+let losses = 0;
+let draws = 0;
 
+let playerName = prompt(`Hi, please enter your name`);
+
+startGame();
 
 let playAgain = confirm(`Do you want to play again?`);
 
@@ -47,12 +54,28 @@ if (playerMove === "paper") {
 };
 }
 function startGame() {
-    let playerMove = prompt("What's your move?");
+    gameNumber++
+    let playerMove = prompt(`Would you like to play rock, paper or scissors, ${playerName}?`);
     let computerMove = getRandomMove(); 
-    let result = getWinner(playerMove, computerMove);
-    alert(`Your ${result} is`);
+    let result;
+    if (getWinner(playerMove, computerMove) === 1) {
+    result = `${playerName}, you win!`
+    wins ++;
+} else if (getWinner(playerMove, computerMove) === -1) {
+    result = `Sorry, ${playerName}, you lose!`
+    losses ++;
+ } else if (getWinner(playerMove, computerMove) === 0) {
+     result = `Sorry, ${playerName}, you drew!`
+     draws++;
+ };
+
+ alert(`${playerName}, you picked: ${playerMove} 
+Computer picked: ${computerMove}. 
+${result}!`);
+
+ alert(`Games played: ${gameNumber}
+ Number of wins: ${wins}
+ Number of losses: ${losses}
+ Number of draws: ${draws}`);
 
 };
-
-
-
