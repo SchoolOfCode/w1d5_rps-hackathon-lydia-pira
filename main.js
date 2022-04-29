@@ -1,9 +1,9 @@
-let playerMove;
-let computerMove;
+let playerMove = "rock";
+let computerMove = "scissors";
 
 
 if (playerMove === "rock") { 
-    if computerMove === "rock" {
+    if (computerMove === "rock") {
     console.log("draw");
 } else if (computerMove === "paper") {
     console.log("loss");
@@ -13,7 +13,7 @@ if (playerMove === "rock") {
 };
 
 if (playerMove === "scissors") { 
-    if computerMove === "scissors" {
+    if (computerMove === "scissors") {
     console.log("draw");
 } else if (computerMove === "rock") {
     console.log("loss");
@@ -23,7 +23,7 @@ if (playerMove === "scissors") {
 };
 
 if (playerMove === "paper") { 
-    if computerMove === "paper" {
+    if (computerMove === "paper") {
     console.log("draw");
 } else if (computerMove === "scissors") {
     console.log("loss");
