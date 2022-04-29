@@ -6,8 +6,8 @@ let playAgain = confirm(`Do you want to play again?`);
 
 while(playAgain) {
     startGame();
-    let playAgain = confirm(`Do you want to play again?`);
-}
+    playAgain = confirm(`Do you want to play again?`);
+};
 
 
 function getRandomMove() {
@@ -53,4 +53,6 @@ function startGame() {
     alert(`Your ${result} is`);
 
 };
+
+
 
