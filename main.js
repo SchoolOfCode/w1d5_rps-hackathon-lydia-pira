@@ -1,5 +1,7 @@
-let playerMove;
-let computerMove;
+let playerMove = prompt("What's your move?");
+let computerMove = "rock"; 
+
+
 
 function getWinner(playerMove, computerMove) {
 if (playerMove === "rock") { 
@@ -31,4 +33,6 @@ if (playerMove === "paper") {
 };
 }
 
-let result = getWinner("rock", "scissors")
+let result = getWinner(playerMove, computerMove);
+
+alert(`Your ${result} is`);
