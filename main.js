@@ -1,5 +1,14 @@
-let playerMove = prompt("What's your move?");
-let computerMove = getRandomMove(); 
+
+
+let playAgain = confirm(`Do you want to play again?`);
+
+
+
+while(playAgain) {
+    startGame();
+    let playAgain = confirm(`Do you want to play again?`);
+}
+
 
 function getRandomMove() {
     let moves = ["rock", "scissors", "paper"];
@@ -37,7 +46,11 @@ if (playerMove === "paper") {
 }
 };
 }
+function startGame() {
+    let playerMove = prompt("What's your move?");
+    let computerMove = getRandomMove(); 
+    let result = getWinner(playerMove, computerMove);
+    alert(`Your ${result} is`);
 
-let result = getWinner(playerMove, computerMove);
+};
 
-alert(`Your ${result} is`);
