@@ -4,6 +4,11 @@ let losses = 0;
 let draws = 0;
 
 let playerName = prompt(`Hi, please enter your name`);
+let playerNameregex = /[A-Z]/;
+
+while (playerName.length > 10  || !playerNameregex.test(playerName[0])) {
+    playerName = prompt("Please make sure your name starts with a capital letter and is less than 10 characters.");
+}
 
 startGame();
 
@@ -58,6 +63,10 @@ function startGame() {
     let playerMove = prompt(`Would you like to play rock, paper or scissors, ${playerName}?`);
     let computerMove = getRandomMove(); 
     let result;
+    let playerMoveRegex = /^rock$|^paper$|^scissors$/;
+    while (!playerMoveRegex.test(playerMove)) {
+        playerMove = prompt(`${playerName}, the name of the game is rock, paper, scissors - choose one of those!`);
+    }
     if (getWinner(playerMove, computerMove) === 1) {
     result = `${playerName}, you win!`
     wins ++;
