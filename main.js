@@ -1,7 +1,12 @@
 let playerMove = prompt("What's your move?");
-let computerMove = "rock"; 
+let computerMove = getRandomMove(); 
 
-
+function getRandomMove() {
+    let moves = ["rock", "scissors", "paper"];
+    let randomNumber = Math.floor(Math.random() * (2 - 0 + 1) + 0);
+    let randomMove = moves[randomNumber];
+    return randomMove
+}
 
 function getWinner(playerMove, computerMove) {
 if (playerMove === "rock") { 
