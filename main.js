@@ -88,3 +88,23 @@ ${result}!`);
  Number of draws: ${draws}`);
 
 };
+
+/* extension 2
+To make the computer win all the time -
+
+ function computerWinningMove(playerMove) {
+    let winningMove; 
+    if (playerMove === "rock") {
+        winningMove = "scissors"; 
+    } else if (playerMove === "paper") {
+        winningMove = "scissors";
+    } else (playerMove === "scissors") {
+        winningMove = "rock";
+    }
+return winningMove;
+};
+
+Then replace all instances of getRandomMove with computerWinningMove.
+
+
+*/
